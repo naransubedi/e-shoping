@@ -1,12 +1,12 @@
-package com.narayan.onlineshopingbackendtest.dao.impl;
+package com.naran.onlineshoping.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.narayan.onlineshopingbackendtest.dao.CategoryDao;
-import com.narayan.onlineshopingbackendtest.domain.Category;
+import com.naran.onlineshoping.dao.CategoryDao;
+import com.naran.onlineshoping.domain.Category;
 
 @Repository("categoryDao")
 public class CategoryDaoImpl implements CategoryDao{

@@ -1,13 +1,13 @@
-package com.narayan.onlineshopingbackendtest.service.impl;
+package com.naran.onlineshoping.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.narayan.onlineshopingbackendtest.dao.CategoryDao;
-import com.narayan.onlineshopingbackendtest.domain.Category;
-import com.narayan.onlineshopingbackendtest.service.CategoryService;
+import com.naran.onlineshoping.dao.CategoryDao;
+import com.naran.onlineshoping.domain.Category;
+import com.naran.onlineshoping.service.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {

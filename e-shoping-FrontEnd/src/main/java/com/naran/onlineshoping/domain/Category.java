@@ -1,11 +1,20 @@
-package com.narayan.onlineshopingbackendtest.domain;
+package com.naran.onlineshoping.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
-	String description;
-	String imageUrl;
 	String name;
+	String description;
+	@Column(name = "image_url")
+	String imageUrl;
 	public int getId() {
 		return id;
 	}

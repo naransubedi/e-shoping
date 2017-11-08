@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.narayan.onlineshopingbackendtest.domain.Category;
-import com.narayan.onlineshopingbackendtest.service.CategoryService;
+import com.naran.onlineshoping.domain.Category;
+import com.naran.onlineshoping.service.CategoryService;
 
 
 

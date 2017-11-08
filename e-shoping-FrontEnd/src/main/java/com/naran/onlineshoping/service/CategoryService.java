@@ -1,8 +1,8 @@
-package com.narayan.onlineshopingbackendtest.service;
+package com.naran.onlineshoping.service;
 
 import java.util.List;
 
-import com.narayan.onlineshopingbackendtest.domain.Category;
+import com.naran.onlineshoping.domain.Category;
 
 public interface CategoryService {
 	List<Category> findAll();

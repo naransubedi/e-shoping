@@ -1,8 +1,8 @@
-package com.narayan.onlineshopingbackendtest.dao;
+package com.naran.onlineshoping.dao;
 
 import java.util.List;
 
-import com.narayan.onlineshopingbackendtest.domain.Category;
+import com.naran.onlineshoping.domain.Category;
 
 public interface CategoryDao {
 	
