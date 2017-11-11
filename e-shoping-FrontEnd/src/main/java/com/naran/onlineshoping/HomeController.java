@@ -92,4 +92,18 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	
+	@RequestMapping(value = {"/product/viewProduct/{id}"}, method = RequestMethod.GET)
+	public String showProduct( Model model, @PathVariable("id") int id) {
+		
+		
+		model.addAttribute("title", productService.getProductById(id).getName() );
+		
+		model.addAttribute("userClickProductShow", true);
+
+		model.addAttribute("product", productService.getProductById(id));
+		
+		return "home";
+	}
 }
