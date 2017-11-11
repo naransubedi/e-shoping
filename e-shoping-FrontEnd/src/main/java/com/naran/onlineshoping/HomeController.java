@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.naran.onlineshoping.domain.Category;
 import com.naran.onlineshoping.service.CategoryService;
+import com.naran.onlineshoping.service.ProductService;
 
 
 
@@ -18,6 +19,9 @@ public class HomeController {
 	
 	@Autowired
 	CategoryService categoryService;
+	
+	@Autowired
+	ProductService productService;
 
 	@RequestMapping(value = {"/", "/home", "index" }, method = RequestMethod.GET)
 	public String home( Model model) {
@@ -69,9 +73,11 @@ public class HomeController {
 		
 		model.addAttribute("categories", categoryService.findAll());
 		
+		model.addAttribute("products", productService.findAll());
+		
 		return "home";
 	}
-	
+
 	@RequestMapping(value = {"/category/{id}/products" }, method = RequestMethod.GET)
 	public String showProductsByCategory( Model model, @PathVariable("id") int id) {
 		
@@ -79,12 +85,11 @@ public class HomeController {
 		model.addAttribute("title", categoryService.getCategoryById(id).getName() );
 		
 		model.addAttribute("userClickCategoryProducts", true);
-		
+
 		model.addAttribute("categories", categoryService.findAll());
-		
-		model.addAttribute("category", categoryService.getCategoryById(id));
+
+		model.addAttribute("products", productService.findProductsByCategoryId(id));
 		
 		return "home";
 	}
-	
 }

@@ -28,7 +28,8 @@
 
 <link href="<c:url value="/resources/css/bootstrap-readable-theme.css" />" rel="stylesheet">
 
-<!-- Custom styles for this template -->
+<link href="<c:url value="/resources/css/jquery.dataTables.css" />" rel="stylesheet">
+
 <!-- <link href="resources/css/myapp.css" rel="stylesheet"> -->
 
 <link href="<c:url value="/resources/css/myapp.css" />" rel="stylesheet">
@@ -69,14 +70,11 @@
 
 
 		<!-- Bootstrap core JavaScript -->
-		<!-- <script src="resources/js/jquery.min.js"></script>
-		<script src="resources/js/popper.min.js"></script>
-		<script src="resources/js/bootstrap.min.js"></script>
-		<script src="resources/js/myapp.js"></script> -->
 		
 		 <script src="<c:url value="/resources/js/jquery.min.js" />"></script>
 		  <script src="<c:url value="/resources/js/popper.min.js" />"></script>
 		   <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+		   <script src="<c:url value="/resources/js/jquery.dataTables.js" />"></script>
 		    <script src="<c:url value="/resources/js/myapp.js" />"></script>
 
 	</div>

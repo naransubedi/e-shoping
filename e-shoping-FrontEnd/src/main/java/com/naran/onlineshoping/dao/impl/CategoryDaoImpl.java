@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.naran.onlineshoping.dao.CategoryDao;
 import com.naran.onlineshoping.domain.Category;
 
-@Repository("categoryDao")
+@Repository
 public class CategoryDaoImpl implements CategoryDao{
 	
 	private static List<Category> categories = new ArrayList<Category>();
@@ -25,7 +25,7 @@ public class CategoryDaoImpl implements CategoryDao{
 		cat2.setName("TV");
 		cat2.setDescription("TV Desc");
 		cat2.setImageUrl("cat1>png");
-		
+
 		Category cat3 = new Category();
 		cat3.setId(3);
 		cat3.setName("Computer");
@@ -38,7 +38,6 @@ public class CategoryDaoImpl implements CategoryDao{
 	}
 
 	public List<Category> findAll() {
-		// TODO Auto-generated method stub
 		return categories;
 	}
 
