@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.naran.onlineshoping.dao.ProductDao;
+import com.naran.onlineshoping.domain.Category;
 import com.naran.onlineshoping.domain.Product;
 
 @Repository
@@ -58,11 +59,11 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<Product> findProductsByCategoryId(int id) {
+	public List<Product> findProductsByCategory(Category category) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "FROM Product E WHERE E.categoryId = :category_id";
+		String hql = "FROM Product E WHERE E.category = :category";
 		Query query = session.createQuery(hql);
-		query.setParameter("category_id", id);
+		query.setParameter("category", category);
 		List<Product> products = query.list();
 		return products;
 	}

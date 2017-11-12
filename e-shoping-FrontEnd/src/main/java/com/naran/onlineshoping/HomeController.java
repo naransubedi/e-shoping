@@ -88,7 +88,7 @@ public class HomeController {
 
 		model.addAttribute("categories", categoryService.findAll());
 
-		model.addAttribute("products", productService.findProductsByCategoryId(id));
+		model.addAttribute("products", productService.findProductsByCategory(categoryService.getCategoryById(id)));
 		
 		return "home";
 	}

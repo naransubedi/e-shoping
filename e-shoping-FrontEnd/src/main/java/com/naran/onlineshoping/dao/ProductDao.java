@@ -2,6 +2,7 @@ package com.naran.onlineshoping.dao;
 
 import java.util.List;
 
+import com.naran.onlineshoping.domain.Category;
 import com.naran.onlineshoping.domain.Product;
 
 public interface ProductDao {
@@ -14,6 +15,6 @@ public interface ProductDao {
 	
 	public void delete(Product p);
 	
-	public List<Product> findProductsByCategoryId(int id);
+	public List<Product> findProductsByCategory(Category category);
 	
 }

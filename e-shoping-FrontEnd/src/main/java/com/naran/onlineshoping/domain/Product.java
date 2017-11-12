@@ -1,12 +1,13 @@
 package com.naran.onlineshoping.domain;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Product {
@@ -26,13 +27,18 @@ public class Product {
 	@Column(name = "is_active")
 	private boolean active;
 	
-	@Column(name = "category_id")
+	@Transient
 	private int categoryId;
-	
+
 	@Column(name = "supplier_id")
 	private int supplierId;
 	private int purchases;
 	private int views;
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private Category category;
 
 	public int getId() {
 		return id;
@@ -105,6 +111,13 @@ public class Product {
 	}
 	public void setViews(int views) {
 		this.views = views;
+	}
+	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 }
